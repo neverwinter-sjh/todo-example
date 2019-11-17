@@ -1,19 +1,14 @@
-import React from 'react';
-import { Router, Route, Switch } from 'react-router';
-import Main from 'Views/Main';
-import About from 'Views/About';
+import React from "react";
+import { Router, Route, Switch } from "react-router";
+import Main from "Views/Main";
 
-const App = ({ history }) => {
+const App = ({ history, store }) => {
   return (
     <div className="app-container">
-      <Router history={history}>
+      <Router history={history} store={store}>
         <Switch>
           <Route exact path="/" component={Main} />
-          <Route path="/about" component={About} />
-          <Route
-            path="/*"
-            component={() => <h1 style={{ color: 'red' }}>NOT FOUND!!!</h1>}
-          />
+          <Route path="/*" component={Main} />
         </Switch>
       </Router>
     </div>

@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { Component } from "react";
+import AddInput from "Components/AddInput";
+import TodoList from "Components/TodoList";
 
-let App = () => {
-  return <h1>Main Page</h1>;
-};
+class Main extends Component {
+  componentDidMount() {
+    console.log(this.props);
+  }
 
-// const mapStateToProps = (state, ownProps) => ({
-//   id: ownProps.match.params[0],
-//   callDone: state.reducer.callDone
-// });
+  render() {
+    return (
+      <div className="todo-container">
+        <h1 className="todo-tit">Simple Todo App</h1>
+        <AddInput />
+        <TodoList />
+      </div>
+    );
+  }
+}
 
-// const mapDispatchToProps = dispatch => ({
-//   getByUrl: name => {
-//     dispatch({ type: 'GET_TEMP', name });
-//   }
-// });
-
-// export default connect(mapStateToProps, mapDispatchToProps)(App);
-export default App;
+export default Main;
