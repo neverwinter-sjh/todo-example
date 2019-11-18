@@ -1,6 +1,6 @@
-import React from "react";
-import { Router, Route, Switch } from "react-router";
-import Main from "Views/Main";
+import React from 'react';
+import { Router, Route, Switch } from 'react-router';
+import Main from 'Views/Main';
 
 const App = ({ history, store }) => {
   return (

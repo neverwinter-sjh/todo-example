@@ -1,12 +1,8 @@
-import React, { Component } from "react";
-import AddInput from "Components/AddInput";
-import TodoList from "Components/TodoList";
+import React, { Component } from 'react';
+import AddInput from 'Components/AddInput';
+import TodoList from 'Components/TodoList';
 
 class Main extends Component {
-  componentDidMount() {
-    console.log(this.props);
-  }
-
   render() {
     return (
       <div className="todo-container">
